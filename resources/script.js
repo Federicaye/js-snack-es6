@@ -150,8 +150,8 @@ const bikes = [
 ]
 
 let bikeLight = bikes[0];
-for (let bike of bikes) { 
-    if (bike.weight < bikeLight.weight){
+for (let bike of bikes) {
+    if (bike.weight < bikeLight.weight) {
         bikeLight = bike;
     }
 
@@ -188,9 +188,15 @@ function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-for (let team of teamList) { 
-  team.score = randomNumber(1,10);
-  team.foul = randomNumber(1,10);
+for (let team of teamList) {
+    team.score = randomNumber(1, 10);
+    team.foul = randomNumber(1, 10);
 };
 
 console.log(teamList);
+
+for (let team of teamList) {
+    const { name, foul } = team;
+    console.log(name, foul);
+};
+

@@ -196,7 +196,16 @@ for (let team of teamList) {
 console.log(teamList);
 
 for (let team of teamList) {
-    const { name, foul } = team;
-    console.log(name, foul);
+    const { namet, foul } = team;
+    console.log(namet, foul);
 };
 
+const listNameFoul = teamList.map ((el)=> {
+    let newEl = {
+        namet : el.namet,
+        foul : el.foul,
+    }
+    return newEl;
+})
+
+console.log(listNameFoul);
